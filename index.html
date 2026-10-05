@@ -1,76 +1,320 @@
 <!doctype html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Cyber Quest: nine quick, friendly games for Cybersecurity Awareness Month.">
-      <meta name="theme-color" content="#06101e">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-      <meta name="apple-mobile-web-app-title" content="Cyber Quest">
-      <title>Cyber Quest | Cybersecurity Awareness Games</title>
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="icon" href="icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="icon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="script.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber Quest: nine quick, friendly games for Cybersecurity Awareness Month.">
+  <meta name="theme-color" content="#06101e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cyber Quest">
+  <title>Cyber Quest | Cybersecurity Awareness Games</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
 <body>
-    <canvas id="signal-canvas" aria-hidden="true"></canvas>canvas>
+  <canvas id="signal-canvas" aria-hidden="true"></canvas>
 
-    <header class="site-header">
-          <a class="brand" href="#" aria-label="Cyber Quest home">
-                  <span class="brand-mark"><i data-lucide="shield-check"></i>i></span>span>
-                  <span class="brand-text"><strong>CYBER QUEST</strong><em>Play smart. Stay safe.</em></span>span>
-          </a>a>
-        <p class="header-tag"><i data-lucide="shield"></i>i> Cybersecurity Awareness Month</p>p>
-    </header>header>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Cyber Quest home">
+      <span class="brand-mark"><i data-lucide="shield-check"></i></span>
+      <span class="brand-text"><strong>CYBER QUEST</strong><em>Play smart. Stay safe.</em></span>
+    </a>
+    <p class="header-tag"><i data-lucide="shield"></i> Cybersecurity Awareness Month</p>
+  </header>
 
   <main>
-        <section id="home-screen" class="screen active" aria-labelledby="home-title">
-                <div class="intro">
-                          <p class="eyebrow">CYBERSECURITY AWARENESS MONTH  OCTOBER 2026</p>p>
-                          <h1 id="home-title">Play smart.<br><span>Stay safe.</span></h1>h1>
-                        <p class="intro-copy">Nine quick games about staying safe online and at your desk. No tech knowledge needed  just everyday smarts. Pick one to start.</p>p>
-                </div>div>
-        
-              <div class="mission-grid" aria-label="Choose a game">
-                      <button class="mission-card" data-game="phishing">
-                                <span class="mission-number">01</span>
-                                <span class="mission-icon coral"><i data-lucide="fish"></i>i></span>
-                                <span class="mission-meta">Swipe game  90 seconds</span>
-                                <strong>Phish Swipe</strong>
-                                <span>Swipe the safe messages one way and the scams the other. How many can you sort?</span>
-                                <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i>i></span>
-                      </button>button>
-              
-                      <button class="mission-card" data-game="password">
-                                <span class="mission-number">02</span>
-                                <span class="mission-icon blue"><i data-lucide="key-d/> t/ ona"minn  toht d<" "mion-card" data-game="spot">
-                                          <span class="mission-number">04</span>
-                                   aode  sesosa n
-                                = wladeepfake">
-                                  si>pan eade/n>"sp06   n- lzlt d  <s<"arrow-up-rig> la7<lden-id>tt=an"s    teropt   -cta">Play <i data-lucide="arrow-up-right"></i>i></span>
-                                  </button num  < antr
-                                                   ht>s n"utisisalef=ey 
-                                   ao"a .toanv p i3ei tiikidp/ac - sped=il="> swng idd/s  subpe-s
-                                    ipw"/ddcdbaed>
-                                  sbonec   scco/s tton claon safe" id="swipe-trust"><i data-lucide="shield-check"></i>i> Trust/v>l idteolas>
-                                    d iyds -=h-
-                                  tons<<ni<tsak makack< -<r<er  lATIST<-c =luum >rd>><"condac<>>ir>/l /
-                                    <e-l  e<ivS  ha<kev esp  d> rnse isp rerihosen> sbutqci eb  buprmedl> <im>spot-tem po  >laP3is> slada>s tsp  ai
-                                     f
-                                     as"  "de=><> c peisl, idea     <div cim=t00< > sddn pa"</algera  de
-                                       dlucide=>bu"ddfice ane
-                                     =d=d di apylas ais il   s=o
-                                      i"e00<anoaid= d/ass="escape-options"<ir  
-                                                                                <div "crosswordid <swo bloss<xwiv ><ul id="xw"  ro ctt"ealcs <  <platatllass">
-                                                                                Sepit.nv worte  i"a da  abc"<did>"e >    dt"vap</iv>lon -<kc/bu>emem"="m>o<r  gpv ="d
-                                                                                                                                                            <</did></swo></div></im></ni></lden-id></span></span>
-  </main></em></strong>
-</body></title>
-  </head>
+    <section id="home-screen" class="screen active" aria-labelledby="home-title">
+      <div class="intro">
+        <p class="eyebrow">CYBERSECURITY AWARENESS MONTH · OCTOBER 2026</p>
+        <h1 id="home-title">Play smart.<br><span>Stay safe.</span></h1>
+        <p class="intro-copy">Nine quick games about staying safe online and at your desk. No tech knowledge needed — just everyday smarts. Pick one to start.</p>
+      </div>
+
+      <div class="mission-grid" aria-label="Choose a game">
+        <button class="mission-card" data-game="phishing">
+          <span class="mission-number">01</span>
+          <span class="mission-icon coral"><i data-lucide="fish"></i></span>
+          <span class="mission-meta">Swipe game · 90 seconds</span>
+          <strong>Phish Swipe</strong>
+          <span>Swipe the safe messages one way and the scams the other. How many can you sort?</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="password">
+          <span class="mission-number">02</span>
+          <span class="mission-icon blue"><i data-lucide="key-round"></i></span>
+          <span class="mission-meta">Build &amp; test</span>
+          <strong>The Weakest Link</strong>
+          <span>Create a password, then watch a pretend hacker try to crack it. Can yours survive?</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="response">
+          <span class="mission-number">03</span>
+          <span class="mission-icon mint"><i data-lucide="siren"></i></span>
+          <span class="mission-meta">Put it in order</span>
+          <strong>Incident Rush</strong>
+          <span>A laptop might be hacked. Choose the right steps, in the right order, to limit the damage.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="spot">
+          <span class="mission-number">04</span>
+          <span class="mission-icon coral"><i data-lucide="search"></i></span>
+          <span class="mission-meta">Find the risks · 3 minutes</span>
+          <strong>Spot the Spy</strong>
+          <span>Look around a busy office and tap the risky habits hiding in plain sight.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="deepfake">
+          <span class="mission-number">05</span>
+          <span class="mission-icon blue"><i data-lucide="scan-face"></i></span>
+          <span class="mission-meta">Real or fake · 3 minutes</span>
+          <strong>Deepfake Detective</strong>
+          <span>AI can fake a voice or a face. Read each clip and decide what you can trust.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="escape">
+          <span class="mission-number">06</span>
+          <span class="mission-icon mint"><i data-lucide="door-open"></i></span>
+          <span class="mission-meta">3 puzzles · 5 minutes</span>
+          <strong>Micro-Escape Room</strong>
+          <span>Solve three quick puzzles to contain a cyber-attack and unlock the door.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="crossword">
+          <span class="mission-number">07</span>
+          <span class="mission-icon blue"><i data-lucide="grid-3x3"></i></span>
+          <span class="mission-meta">Puzzle · no timer</span>
+          <strong>Security Crossword</strong>
+          <span>Fill in the grid with everyday security words. A relaxed way to learn the lingo.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="data">
+          <span class="mission-number">08</span>
+          <span class="mission-icon mint"><i data-lucide="lock-keyhole"></i></span>
+          <span class="mission-meta">Sort it · no timer</span>
+          <strong>Sort It Out</strong>
+          <span>Decide what's safe to share and what to keep private, then drop each item in the right box.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+
+        <button class="mission-card" data-game="match">
+          <span class="mission-number">09</span>
+          <span class="mission-icon coral"><i data-lucide="brain"></i></span>
+          <span class="mission-meta">Memory game · 6 pairs</span>
+          <strong>Security Match</strong>
+          <span>Flip the cards to match each risk with the right thing to do about it.</span>
+          <span class="mission-cta">Play <i data-lucide="arrow-up-right"></i></span>
+        </button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen" aria-live="polite">
+      <div class="game-topbar">
+        <button id="back-button" class="icon-button" aria-label="Return to mission select" title="Mission select">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <div>
+          <p id="game-kicker" class="eyebrow"></p>
+          <h2 id="game-title"></h2>
+        </div>
+        <div id="game-progress" class="game-progress"></div>
+      </div>
+      <div id="game-area" class="game-area"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span><i data-lucide="shield"></i> Cybersecurity Awareness Month · October 2026</span>
+    <span>Play smart. Stay safe.</span>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <template id="phishing-template">
+    <div class="swipe-layout">
+      <aside class="brief-panel">
+        <span class="brief-icon"><i data-lucide="hand"></i></span>
+        <h3>Trust it or bin it?</h3>
+        <p>Read each message. Swipe right (or tap <strong>Trust</strong>) if it's safe. Swipe left (or tap <strong>Report</strong>) if it looks like a scam.</p>
+        <div class="timer"><i data-lucide="timer"></i><span id="swipe-timer">90</span>s</div>
+      </aside>
+      <div class="swipe-stage">
+        <div class="swipe-card" id="swipe-card">
+          <div class="swipe-tag"><span id="swipe-kind">Email</span><span id="swipe-msgtime"></span></div>
+          <div class="swipe-sender"><strong id="swipe-from"></strong><span id="swipe-handle"></span></div>
+          <p class="subject" id="swipe-subject"></p>
+          <p class="swipe-body" id="swipe-body"></p>
+          <div class="link-preview" id="swipe-link"></div>
+        </div>
+        <div class="swipe-feedback" id="swipe-feedback"></div>
+        <div class="swipe-actions">
+          <button class="decision phish" id="swipe-report"><i data-lucide="flag"></i> Report</button>
+          <span class="swipe-count" id="swipe-count">0/0 correct</span>
+          <button class="decision safe" id="swipe-trust"><i data-lucide="shield-check"></i> Trust</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="password-template">
+    <div class="password-layout">
+      <div class="lab-console">
+        <p class="console-label">PASSWORD TESTER</p>
+        <label for="password-input">Build a password and see how long a hacker would need</label>
+        <div class="password-input-wrap">
+          <input id="password-input" type="password" autocomplete="new-password" placeholder="Type a password or passphrase" spellcheck="false">
+          <button id="toggle-password" class="icon-button" aria-label="Show password" title="Show password"><i data-lucide="eye"></i></button>
+        </div>
+        <div class="strength-track"><span id="strength-bar"></span></div>
+        <div class="strength-summary"><strong id="strength-label">Type to begin</strong><span id="strength-score">0 / 5</span></div>
+        <div class="crack-line">Time to crack by guessing: <strong id="crack-time">&mdash;</strong></div>
+        <div class="attack-stage" id="attack-stage">
+          <div class="attack-face"><span class="attack-hacker"><i data-lucide="user-round"></i></span><span class="attack-lock"><i data-lucide="lock"></i></span></div>
+          <div class="attack-meter" id="attack-meter"><span></span></div>
+          <p class="attack-result" id="attack-result"></p>
+        </div>
+        <button id="attack-password" class="primary-button" disabled><i data-lucide="swords"></i> Run the guessing attack</button>
+        <p class="privacy-note"><i data-lucide="hard-drive-off"></i> What you type stays in your browser and is never saved or sent.</p>
+      </div>
+      <div class="checklist-panel">
+        <p class="console-label">WHAT MAKES IT STRONG</p>
+        <ul id="password-checks">
+          <li data-check="length"><i data-lucide="circle"></i><span><strong>14+ characters</strong>Longer is stronger &mdash; it's the number-one thing.</span></li>
+          <li data-check="words"><i data-lucide="circle"></i><span><strong>A few words</strong>Unrelated words are easy to remember, hard to guess.</span></li>
+          <li data-check="case"><i data-lucide="circle"></i><span><strong>Capital letters</strong>Mix big and small letters.</span></li>
+          <li data-check="number"><i data-lucide="circle"></i><span><strong>A number</strong>Not a birthday or 1234.</span></li>
+          <li data-check="symbol"><i data-lucide="circle"></i><span><strong>A symbol</strong>Like ! ? or #.</span></li>
+        </ul>
+      </div>
+    </div>
+  </template>
+
+  <template id="response-template">
+    <div class="response-layout">
+      <div class="incident-banner">
+        <span><i data-lucide="triangle-alert"></i></span>
+        <div><p class="eyebrow">SOMETHING'S WRONG</p><h3>A laptop might be hacked</h3><p>A coworker says pop-ups keep appearing and the mouse is moving on its own.</p></div>
+      </div>
+      <div class="response-board">
+        <p>Tap the actions in the order you'd do them.</p>
+        <div id="response-options" class="response-options"></div>
+        <div id="response-sequence" class="response-sequence" aria-label="Your chosen order"></div>
+        <div class="response-actions">
+          <button id="reset-sequence" class="secondary-button"><i data-lucide="rotate-ccw"></i> Reset</button>
+          <button id="check-sequence" class="primary-button" disabled><i data-lucide="list-checks"></i> Check my order</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="spot-template">
+    <div class="spot-layout">
+      <div class="spot-head">
+        <div><p class="eyebrow">CLEAN-DESK PATROL</p><h3>Tap every security risk you can find</h3></div>
+        <div class="spot-meta">
+          <span class="timer"><i data-lucide="timer"></i><span id="spot-timer">3:00</span></span>
+          <span id="spot-count">0 / 6 risks found</span>
+        </div>
+      </div>
+      <div class="spot-grid" id="spot-grid"></div>
+    </div>
+  </template>
+
+  <template id="deepfake-template">
+    <div class="deepfake-layout">
+      <aside class="brief-panel">
+        <span class="brief-icon"><i data-lucide="scan-face"></i></span>
+        <h3>Real or AI?</h3>
+        <p>AI can invent faces of people who don't exist. Look closely at the eyes, ears, teeth, glasses, jewelry, and background, then decide if each portrait is a real photo or AI-generated.</p>
+        <div class="timer"><i data-lucide="timer"></i><span id="df-timer">3:00</span></div>
+      </aside>
+      <article class="deepfake-card">
+        <div class="df-head"><span class="df-channel" id="df-channel">Profile photo</span><span class="df-who" id="df-who"></span></div>
+        <div class="df-photo" id="df-photo"></div>
+        <p class="df-prompt">Is this a real photo or an AI-generated face?</p>
+        <div class="decision-row">
+          <button class="decision safe df-choice" data-choice="real"><i data-lucide="check"></i> Real photo</button>
+          <button class="decision phish df-choice" data-choice="fake"><i data-lucide="scan-face"></i> AI-generated</button>
+        </div>
+        <div class="feedback-panel" id="df-feedback" hidden></div>
+      </article>
+    </div>
+  </template>
+
+  <template id="escape-template">
+    <div class="escape-layout">
+      <div class="escape-head">
+        <div class="escape-locks">
+          <span class="escape-lock"><i data-lucide="lock"></i></span>
+          <span class="escape-lock"><i data-lucide="lock"></i></span>
+          <span class="escape-lock"><i data-lucide="lock"></i></span>
+        </div>
+        <span class="timer"><i data-lucide="timer"></i><span id="escape-timer">5:00</span></span>
+      </div>
+      <div class="escape-board">
+        <h3 id="escape-title"></h3>
+        <p id="escape-prompt"></p>
+        <div class="escape-options" id="escape-options"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="crossword-template">
+    <div class="crossword-layout">
+      <div class="crossword-grid" id="crossword-grid"></div>
+      <div class="crossword-side">
+        <div class="clue-block"><h4>Across</h4><ul id="xw-across"></ul></div>
+        <div class="clue-block"><h4>Down</h4><ul id="xw-down"></ul></div>
+        <div class="crossword-actions">
+          <button id="xw-reveal" class="secondary-button"><i data-lucide="eye"></i> Reveal</button>
+          <button id="xw-check" class="primary-button"><i data-lucide="check-check"></i> Check answers</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="data-template">
+    <div class="data-layout">
+      <div class="data-intro">
+        <p class="eyebrow">WHAT'S SAFE TO SHARE?</p>
+        <p>Tap an item, then tap a box to sort it. Some information is fine to share; some must stay private. Press Check when every item is sorted.</p>
+      </div>
+      <div class="data-tray" id="data-tray" aria-label="Items to sort"></div>
+      <div class="data-bins">
+        <div class="data-bin" id="bin-public">
+          <div class="bin-head"><i data-lucide="globe"></i> Safe to share</div>
+          <div class="bin-drop"></div>
+        </div>
+        <div class="data-bin" id="bin-private">
+          <div class="bin-head"><i data-lucide="lock"></i> Keep private</div>
+          <div class="bin-drop"></div>
+        </div>
+      </div>
+      <div class="data-actions">
+        <button id="data-check" class="primary-button" disabled><i data-lucide="check-check"></i> Check</button>
+      </div>
+    </div>
+  </template>
+
+  <template id="match-template">
+    <div class="match-layout">
+      <p class="match-intro">Flip two cards to find a <strong>risk</strong> and the <strong>right response</strong>. Match all six pairs.</p>
+      <div class="match-board" id="match-board"></div>
+    </div>
+  </template>
+</body>
+</html>

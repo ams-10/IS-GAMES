@@ -22,6 +22,8 @@ Open `index.html` directly, or serve the directory with any static server:
 npx serve .
 ```
 
+To install it as an app, serve it over `http://localhost` or open the deployed HTTPS site in a supported browser. Use the browser's install button in the address bar or its menu (`Install Cyber Quest`, `Add to Home screen`, or similar). Service workers do not run from a `file://` URL, so installing requires localhost or HTTPS.
+
 ## Deploy to GitHub Pages
 
 1. Create a GitHub repository and push these files to the `main` branch.
