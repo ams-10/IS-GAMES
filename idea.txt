@@ -1,0 +1,1 @@
+For iPads (iOS): Open Safari → Load your GitHub URL → Tap the Share icon → Select Add to Home Screen. This turns the website into a standalone web app icon. Open it, then turn on Guided Access (Settings > Accessibility) to lock the screen. The URL bar disappears entirely.
