@@ -1,0 +1,19 @@
+{
+    "name": "Cyber Quest",
+    "short_name": "Cyber Quest",
+    "description": "Nine quick cybersecurity awareness games.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#06101e",
+    "theme_color": "#06101e",
+    "icons": [
+          {
+                  "src": "icon.svg",
+                  "sizes": "any",
+                  "type": "image/svg+xml",
+                  "purpose": "any maskable"
+          }
+    ]
+}
