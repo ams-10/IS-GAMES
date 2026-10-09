@@ -4,13 +4,18 @@ A dependency-free set of games for Cybersecurity Awareness Month, built with pla
 
 - **Phish Swipe:** swipe messages to trust the safe ones and report the scams (90 seconds).
 - **The Weakest Link:** build a password and watch a simulated hacker try to crack it.
-- **Incident Rush:** put the response steps in the right order when a laptop is hacked.
+- **Incident Rush:** put the response steps in the right order for one of four incidents.
 - **Spot the Spy:** tap the risky habits hiding around a busy office (3 minutes).
-- **Deepfake Detective:** study AI-generated and real face portraits, then spot the fakes by their tells — mismatched eyes, warped glasses, odd teeth, and melted backgrounds (3 minutes).
-- **Micro-Escape Room:** solve three quick puzzles to contain an attack (5 minutes).
-- **Security Crossword:** fill in a grid of everyday security words.
-- **Sort It Out:** decide what information is safe to share and what should stay private.
+- **Deepfake Detective:** judge six real-world photos — frogs, kids painting, a shuttle launch, Mount Fuji, the Titanic, the northern lights — and decide which are AI-generated, then see an annotated side-by-side of the tells. No timer; advance at your own pace.
+- **Micro-Escape Room:** solve three quick puzzles to contain an attack, with a plain-language explanation after every answer (5 minutes).
+- **Security Crossword:** fill in a grid of everyday security words (three different grids).
+- **Sort It Out:** two rounds — what information is safe to share versus private, then what's safe to type into an AI assistant versus never paste.
 - **Security Match:** a memory game that pairs each risk with the right response.
+
+Every game draws from a larger pool than it shows, and remembers what you've already
+seen (in `localStorage` under `cyberQuestSeen`), so a replay gives you different
+questions. When a pool runs out it starts a new cycle, still avoiding whatever came up
+last time.
 
 Which games you've played is remembered in your browser. Nothing you type (including passwords) is ever saved or sent anywhere.
 

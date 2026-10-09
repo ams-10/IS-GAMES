@@ -62,15 +62,171 @@ const phishingMessages = [
     body: "Quick one before my meeting \u2014 can you buy five $100 gift cards for a client and send me the codes? I'll expense it.",
     link: "", answer: "phish",
     clue: "A boss asking for secret gift-card codes in a hurry is a well-known scam, even when the name looks right. Confirm in person."
+  },
+  {
+    type: "Email", name: "Microsoft 365", email: "no-reply@micros0ft-security.com", time: "7:41 AM",
+    subject: "Unusual sign-in blocked \u2014 verify now",
+    body: "We stopped a sign-in from Belarus. Verify your identity within 24 hours or your account will be locked.",
+    link: "micros0ft-security.com/verify", answer: "phish",
+    clue: "Look closely: Microsoft is spelled with a zero. Real security alerts don't send you to an outside address."
+  },
+  {
+    type: "Email", name: "HR Team", email: "hr@yourcompany.com", time: "9:30 AM",
+    subject: "Open enrolment closes Friday",
+    body: "A reminder that benefits enrolment closes Friday. Sign in to the HR portal from the intranet home page when you have a moment.",
+    link: "", answer: "safe",
+    clue: "It's a routine reminder from your own HR address and tells you to go through the intranet yourself rather than clicking a link."
+  },
+  {
+    type: "Text", name: "Delivery", email: "+44 7700 900231", time: "6:12 PM",
+    subject: "",
+    body: "Your parcel could not be delivered. Pay the \u00a31.45 redelivery fee here: royalmai1-redeliver.com",
+    link: "royalmai1-redeliver.com", answer: "phish",
+    clue: "A tiny fee is bait to capture your card details, and the address uses a 1 instead of an l. Track parcels in the official app."
+  },
+  {
+    type: "Email", name: "Priya Raman", email: "priya.raman@yourcompany.com", time: "11:05 AM",
+    subject: "Slides for tomorrow",
+    body: "Here are the slides you asked for yesterday. I left comments on slide 4 \u2014 shout if anything looks off.",
+    link: "yourcompany.sharepoint.com/sites/marketing", answer: "safe",
+    clue: "It continues a conversation you started, comes from an internal address, and links to your usual work site."
+  },
+  {
+    type: "Email", name: "IT Helpdesk", email: "helpdesk@yourcompany-it.net", time: "2:02 PM",
+    subject: "Action required: re-enter your password",
+    body: "We are migrating mailboxes tonight. Reply to this message with your username and password so we can move your account.",
+    link: "", answer: "phish",
+    clue: "No IT team will ever ask for your password \u2014 by email, phone, or chat. The domain is also not your company's."
+  },
+  {
+    type: "Chat", name: "Sam from Finance", email: "Microsoft Teams", time: "10:48 AM",
+    subject: "",
+    body: "New supplier bank details attached \u2014 please update the payment before close of business and don't mention it to anyone yet.",
+    link: "", answer: "phish",
+    clue: "Changing bank details plus urgency plus secrecy is the classic invoice-fraud pattern. Verify by phone on a known number."
+  },
+  {
+    type: "Email", name: "Building Reception", email: "reception@yourcompany.com", time: "8:20 AM",
+    subject: "Lift maintenance on Tuesday",
+    body: "Lift B will be out of service on Tuesday morning. Please use Lift A or the stairs. Sorry for the inconvenience.",
+    link: "", answer: "safe",
+    clue: "Pure information from an internal address \u2014 nothing to click, nothing to hand over."
+  },
+  {
+    type: "Text", name: "Unknown", email: "+1 (202) 555-0188", time: "9:58 PM",
+    subject: "",
+    body: "Hi, is this still your number? I'm Emma \u2014 we met at the conference. I have an investment tip you'll love.",
+    link: "", answer: "phish",
+    clue: "A stranger who 'remembers' you and pivots to money is running a long-con scam. Don't reply \u2014 replying confirms the number is live."
+  },
+  {
+    type: "Email", name: "Adobe", email: "message@adobe-invoices.info", time: "3:15 PM",
+    subject: "Invoice #40219 \u2014 payment overdue",
+    body: "Your subscription payment failed. Open the attached invoice and confirm your card to avoid losing access.",
+    link: "adobe-invoices.info/pay", answer: "phish",
+    clue: "An unexpected invoice from a look-alike address, with pressure to enter a card. Check subscriptions in the real app instead."
+  },
+  {
+    type: "Email", name: "Security Team", email: "security@yourcompany.com", time: "1:00 PM",
+    subject: "Reminder: phishing simulation this month",
+    body: "During October we'll be running awareness exercises. If something looks odd, use the Report button in Outlook \u2014 that's all we ask.",
+    link: "", answer: "safe",
+    clue: "Internal address, no link, no credentials requested, and it points you at a built-in button rather than a web page."
+  },
+  {
+    type: "Chat", name: "IT Support", email: "WhatsApp", time: "7:05 PM",
+    subject: "",
+    body: "Hi, IT here. We're fixing your laptop remotely \u2014 please read out the 6-digit code we just texted you.",
+    link: "", answer: "phish",
+    clue: "A one-time code is the last step of someone logging in as you. Nobody legitimate will ever ask you to read one out."
+  },
+  {
+    type: "Email", name: "Learning Team", email: "learning@yourcompany.com", time: "10:15 AM",
+    subject: "Your annual training is due",
+    body: "Your compliance module is due by the 31st. You can find it under 'My Learning' after signing in to the intranet.",
+    link: "", answer: "safe",
+    clue: "Expected, internal, and it asks you to navigate there yourself instead of clicking through."
+  },
+  {
+    type: "Text", name: "Bank Security", email: "+1 (888) 555-0143", time: "11:52 AM",
+    subject: "",
+    body: "Fraud detected. Move your money to a safe account now. Call 0800-555-0143 and have your card and PIN ready.",
+    link: "", answer: "phish",
+    clue: "No bank has a 'safe account', and no bank asks for your PIN. Hang up and call the number printed on your card."
+  },
+  {
+    type: "Email", name: "Jon Okafor", email: "j.okafor@yourcompany.com", time: "4:40 PM",
+    subject: "Re: desk move on Monday",
+    body: "Confirmed \u2014 you're on the third floor by the window from Monday. Facilities will move your monitor over the weekend.",
+    link: "", answer: "safe",
+    clue: "A reply in a thread you already know about, from a colleague's real address, asking nothing of you."
+  },
+  {
+    type: "Email", name: "Google Drive", email: "share-noreply@drive-google-docs.com", time: "6:30 AM",
+    subject: "Someone shared 'Bonus_2026.xlsx' with you",
+    body: "A document has been shared with you. Sign in with your work email to view it before access expires.",
+    link: "drive-google-docs.com/open", answer: "phish",
+    clue: "Juicy filename, fake domain, and a sign-in page designed to harvest your work password. Real Drive links use drive.google.com."
   }
 ];
 
-const responseSteps = [
-  { id: 1, text: "Unplug it from the internet (Wi-Fi and cables)" },
-  { id: 2, text: "Call IT or the security team" },
-  { id: 3, text: "Write down what happened and when" },
-  { id: 4, text: "Do what the security team tells you" }
+const responseScenarios = [
+  {
+    id: "malware",
+    headline: "A laptop might be hacked",
+    brief: "A coworker says pop-ups keep appearing and the mouse is moving on its own. Put the first four actions in the right order.",
+    steps: [
+      { id: 1, text: "Unplug it from the internet (Wi-Fi and cables)" },
+      { id: 2, text: "Call IT or the security team" },
+      { id: 3, text: "Write down what happened and when" },
+      { id: 4, text: "Do what the security team tells you" }
+    ],
+    hint: "Stop the spread first, then raise the alarm.",
+    done: "Great calls. Unplug the device, report it, write down what happened, and let the security team take over \u2014 don't try to investigate it yourself."
+  },
+  {
+    id: "clicked-link",
+    headline: "You clicked a fake link",
+    brief: "You clicked a link in an email and typed your password before realising it was fake. Put the first four actions in the right order.",
+    steps: [
+      { id: 1, text: "Change that password straight away" },
+      { id: 2, text: "Report the email to IT" },
+      { id: 3, text: "Check your account for anything you didn't do" },
+      { id: 4, text: "Change the same password anywhere else you used it" }
+    ],
+    hint: "The stolen password is the live danger \u2014 change it before anything else.",
+    done: "Exactly right. Change the password first, report it so IT can look for others who clicked, check for activity that isn't yours, and replace that password anywhere it was reused."
+  },
+  {
+    id: "lost-phone",
+    headline: "Your work phone is missing",
+    brief: "Your work phone goes missing on the train home. Put the first four actions in the right order.",
+    steps: [
+      { id: 1, text: "Report it to IT and your manager" },
+      { id: 2, text: "Ask IT to wipe and lock the device" },
+      { id: 3, text: "Change the passwords for apps on that phone" },
+      { id: 4, text: "Watch for odd messages sent from your accounts" }
+    ],
+    hint: "Someone else may already be holding it \u2014 tell the people who can lock it down.",
+    done: "Spot on. Report it immediately so IT can wipe the device remotely, then change the passwords it held and keep an eye out for messages you didn't send."
+  },
+  {
+    id: "wrong-recipient",
+    headline: "An email went to the wrong person",
+    brief: "You emailed a spreadsheet of customer details to the wrong person outside the company. Put the first four actions in the right order.",
+    steps: [
+      { id: 1, text: "Try to recall the message" },
+      { id: 2, text: "Tell IT and your manager what was sent" },
+      { id: 3, text: "Ask the recipient to delete it" },
+      { id: 4, text: "Help record what information was involved" }
+    ],
+    hint: "Recall it if you can, but tell someone either way \u2014 don't try to quietly fix it.",
+    done: "Well handled. Recall it if you can, but report it regardless: there are legal deadlines for data breaches, and hiding a mistake always makes it worse."
+  }
 ];
+
+let responseScenario = responseScenarios[0];
+let responseSteps = responseScenario.steps;
 
 const homeScreen = document.querySelector("#home-screen");
 const gameScreen = document.querySelector("#game-screen");
@@ -128,7 +284,11 @@ function startPhishing() {
   gameArea.append(document.querySelector("#phishing-template").content.cloneNode(true));
   if (window.lucide) lucide.createIcons();
 
-  const deck = shuffle([...phishingMessages]);
+  const messageId = (message) => message.body.slice(0, 32);
+  const deck = shuffle([
+    ...pickFresh("phish-bad", phishingMessages.filter((m) => m.answer === "phish"), 5, messageId),
+    ...pickFresh("phish-safe", phishingMessages.filter((m) => m.answer === "safe"), 3, messageId)
+  ]);
   const card = document.querySelector("#swipe-card");
   const feedback = document.querySelector("#swipe-feedback");
   const timeEl = document.querySelector("#swipe-timer");
@@ -342,7 +502,13 @@ function startResponse() {
   gameArea.append(document.querySelector("#response-template").content.cloneNode(true));
   if (window.lucide) lucide.createIcons();
 
-  const shuffled = [...responseSteps].sort(() => Math.random() - 0.5);
+  [responseScenario] = pickFresh("response", responseScenarios, 1, (item) => item.id);
+  responseSteps = responseScenario.steps;
+  selectedSteps = [];
+  document.querySelector("#response-headline").textContent = responseScenario.headline;
+  document.querySelector("#response-brief").textContent = responseScenario.brief;
+
+  const shuffled = shuffle([...responseSteps]);
   const options = document.querySelector("#response-options");
   shuffled.forEach((step, index) => {
     const button = document.createElement("button");
@@ -389,12 +555,12 @@ function resetResponse() {
 function checkResponse() {
   const correct = selectedSteps.every((step, index) => step.id === responseSteps[index].id);
   if (!correct) {
-    showToast("Close. Isolate the device first, then alert the response team.");
+    showToast(responseScenario.hint);
     resetResponse();
     return;
   }
   completeGame("response");
-  showResult("Incident contained!", "Great calls. Unplug the device, report it, write down what happened, and let the security team take over \u2014 don't try to investigate it yourself.");
+  showResult("Incident contained!", responseScenario.done);
 }
 
 function completeGame(game) {
@@ -479,6 +645,30 @@ function shuffle(list) {
   return list;
 }
 
+const SEEN_KEY = "cyberQuestSeen";
+const seenItems = JSON.parse(localStorage.getItem(SEEN_KEY) || "{}");
+
+function itemId(item) {
+  return item.id || item.label || item.text || item.risk || item.subject || item.title || JSON.stringify(item);
+}
+
+// Draws `count` items the player hasn't had yet; once a pool runs out it starts a
+// fresh cycle, still avoiding whatever came up in the previous round.
+function pickFresh(key, pool, count, idOf = itemId) {
+  let used = seenItems[key] || [];
+  let fresh = pool.filter((item) => !used.includes(idOf(item)));
+  if (fresh.length < count) {
+    const recent = used.slice(-count);
+    fresh = pool.filter((item) => !recent.includes(idOf(item)));
+    if (fresh.length < count) fresh = [...pool];
+    used = [];
+  }
+  const picked = shuffle([...fresh]).slice(0, count);
+  seenItems[key] = [...used, ...picked.map(idOf)];
+  localStorage.setItem(SEEN_KEY, JSON.stringify(seenItems));
+  return picked;
+}
+
 function formatClock(total) {
   const safe = Math.max(0, total);
   const minutes = Math.floor(safe / 60);
@@ -494,17 +684,34 @@ const spotObjects = [
   { risky: true, icon: "door-open", label: "Stranger slipping through a secure door", tip: "Don't let people follow you in without their own badge." },
   { risky: true, icon: "monitor", label: "Password typed on a visible screen", tip: "Keep passwords and private info off screens others can see." },
   { risky: true, icon: "files", label: "Confidential papers left on the printer", tip: "Collect printouts right away and lock away sensitive documents." },
+  { risky: true, icon: "key", label: "Office key left in the door", tip: "Keys and badges belong on you, not in a lock or a drawer." },
+  { risky: true, icon: "trash", label: "Client list dropped in the normal bin", tip: "Anything with names or account details goes in the shredder." },
+  { risky: true, icon: "smartphone", label: "Work phone left on the café table", tip: "An unattended device is an unlocked door. Take it with you." },
+  { risky: true, icon: "wifi", label: "Free Wi-Fi called 'Airport_Guest_Free'", tip: "Open networks can be fake. Use your phone's hotspot instead." },
+  { risky: true, icon: "user-round", label: "Visitor wandering without an escort", tip: "Guests should be badged and escorted. Offer to walk them back." },
+  { risky: true, icon: "credit-card", label: "Card details read aloud on a call", tip: "Never say card numbers, codes, or passwords out loud in an open space." },
+  { risky: true, icon: "mail-open", label: "Payslips left in an open pigeonhole", tip: "Personal paperwork needs a locked drawer, not a shared tray." },
+  { risky: true, icon: "camera", label: "Whiteboard of plans in a photo", tip: "Check what's in the background before you take or share a photo." },
   { risky: false, icon: "id-card", label: "Someone wearing their staff badge", tip: "" },
   { risky: false, icon: "lock", label: "A screen that is locked", tip: "" },
   { risky: false, icon: "trash-2", label: "Shredder for sensitive paper", tip: "" },
-  { risky: false, icon: "clipboard-check", label: "Visitor sign-in sheet at reception", tip: "" }
+  { risky: false, icon: "clipboard-check", label: "Visitor sign-in sheet at reception", tip: "" },
+  { risky: false, icon: "shield-check", label: "Laptop showing an update reminder", tip: "" },
+  { risky: false, icon: "archive", label: "Filing cabinet that's locked", tip: "" },
+  { risky: false, icon: "coffee", label: "Colleague taking their badge to lunch", tip: "" },
+  { risky: false, icon: "eye-off", label: "Privacy screen on a train laptop", tip: "" },
+  { risky: false, icon: "phone-call", label: "Someone verifying a caller before helping", tip: "" },
+  { risky: false, icon: "printer", label: "Printer that needs a badge to release jobs", tip: "" }
 ];
 
 function startSpot() {
   gameKicker.textContent = "GAME 04";
   gameTitle.textContent = "Spot the Spy";
   gameArea.append(document.querySelector("#spot-template").content.cloneNode(true));
-  const objects = shuffle([...spotObjects]);
+  const objects = shuffle([
+    ...pickFresh("spot-risky", spotObjects.filter((o) => o.risky), 6),
+    ...pickFresh("spot-safe", spotObjects.filter((o) => !o.risky), 4)
+  ]);
   const totalRisky = objects.filter((o) => o.risky).length;
   let found = 0;
   let seconds = 180;
@@ -557,44 +764,112 @@ function startSpot() {
 }
 
 /* ===== Game 05: Deepfake Detective ===== */
-const deepfakeRounds = [
-  { answer: "fake", caption: "New connection request", skin: "#e7b492", skinDark: "#c98f6d", hair: "#2a2730", hairStyle: "long", clothes: "#3a4b64", bg: ["#21506a", "#0e2a3c"], earrings: true, glasses: false, flaws: ["asymmetric-eyes", "mismatched-earrings"],
-    tells: "The eyes are different sizes and sit at different heights, and there's an earring on only one ear \u2014 classic mistakes in AI-generated faces." },
-  { answer: "real", caption: "New coworker", skin: "#d9a07a", skinDark: "#b97f5c", hair: "#1f1b22", hairStyle: "short", clothes: "#394a63", bg: ["#20566a", "#0f2f3f"], earrings: false, glasses: true, flaws: [],
-    tells: "Matched eyes, even ears, tidy glasses, and a clean background. This looks like a genuine photo." },
-  { answer: "fake", caption: "Job applicant", skin: "#f0c3a3", skinDark: "#cf9a78", hair: "#3a2a1e", hairStyle: "short", clothes: "#40506b", bg: ["#2a3f63", "#101f38"], earrings: false, glasses: true, flaws: ["warped-glasses", "melted-background"],
-    tells: "The glasses frame is bent and uneven and the background melts into odd shapes \u2014 strong signs of an AI-generated image." },
-  { answer: "fake", caption: "Dating profile", skin: "#c98a63", skinDark: "#a66a46", hair: "#141019", hairStyle: "bun", clothes: "#374862", bg: ["#1d4a5e", "#0c2634"], earrings: true, glasses: false, flaws: ["extra-teeth", "uneven-ears"],
-    tells: "Look at the mouth \u2014 too many uneven teeth \u2014 and the ears sit at different heights. AI often gets teeth and ears wrong." },
-  { answer: "real", caption: "Follower request", skin: "#e9b48f", skinDark: "#c88f68", hair: "#2c2230", hairStyle: "bun", clothes: "#3a4b64", bg: ["#235a6e", "#0f3040"], earrings: true, glasses: false, flaws: [],
-    tells: "Matched earrings, even features, and a steady background \u2014 no artifacts. A real photo." },
-  { answer: "real", caption: "Account photo", skin: "#cf9a76", skinDark: "#ad7854", hair: "#241d2b", hairStyle: "short", clothes: "#394a63", bg: ["#215063", "#0e2a3a"], earrings: false, glasses: false, flaws: [],
-    tells: "Symmetrical features and a clean, consistent background. This one checks out as a real photo." }
+/* Each topic has a real photo and an AI-generated version of the same scene, plus an
+   annotated side-by-side used as the reveal. northernLights has no real counterpart. */
+const deepfakeTopics = [
+  {
+    caption: "Wildlife photo post",
+    alt: "Blue and black poison dart frog on a mossy rock",
+    ai: "AI/frog_1-1024x576.jpg",
+    real: "AI/frog_2-1024x576.jpg",
+    analysis: "AI/frog_analysis-1024x576.png",
+    aiTells: "The markings are simple, evenly round blobs and the legs melt into the body. AI tends to invent tidy, repeating patterns.",
+    realTells: "The pattern is complex and irregular \u2014 speckles of different sizes, crisp toes, real skin texture. That messiness is a sign of a genuine photo."
+  },
+  {
+    caption: "School newsletter photo",
+    alt: "Children painting together at a table",
+    ai: "AI/kids_doing_art_1-1024x576.jpg",
+    real: "AI/kids_doing_art_2-1024x576.jpg",
+    analysis: "AI/kids_doing_art_analysis-1024x576.png",
+    aiTells: "Count the hands. Some arms don't connect to anyone and a hand appears where no child is standing. Hands are still the number one AI giveaway.",
+    realTells: "Every hand lines up with an arm and an owner, and the kids' attention follows what they're actually doing."
+  },
+  {
+    caption: "Space launch, shared on social",
+    alt: "Space shuttle lifting off through clouds",
+    ai: "AI/launch_1-1024x576.jpg",
+    real: "AI/launch_2-1024x576.jpg",
+    analysis: "AI/launch_analysis-1024x576.png",
+    aiTells: "The shuttle is a vague, simplified shape \u2014 no panels, markings, or hardware. AI blurs detail on anything small or far away.",
+    realTells: "The orbiter shows real structure: panels, markings, and boosters in the right places, with smoke that matches the engines."
+  },
+  {
+    caption: "Travel blog header",
+    alt: "Mount Fuji behind a lake framed by autumn maple leaves",
+    ai: "AI/MtFuji_1-1024x576.jpg",
+    real: "AI/MtFuji_2-1024x576.jpg",
+    analysis: "AI/MtFuji_analysis-1024x576.png",
+    aiTells: "The maple leaves are mushy shapes rather than real leaves, and the far shoreline doesn't match the real place \u2014 buildings dissolve into blur.",
+    realTells: "Individual leaves have stems and sharp edges, and the far bank has real buildings that line up with their reflections."
+  },
+  {
+    caption: "History page photo",
+    alt: "The ocean liner Titanic at sea",
+    ai: "AI/titantic_1-1024x576.jpg",
+    real: "AI/titantic_2-1024x576.png",
+    analysis: "AI/titantic_analysis-1024x576.png",
+    aiTells: "The masts and funnels are the wrong number, size, and spacing, and the light on the hull doesn't match the sunset behind it.",
+    realTells: "Four funnels with the correct rake and spacing, consistent lighting, and period film grain \u2014 it matches the historical record."
+  },
+  {
+    caption: "Aurora photo from a friend",
+    alt: "Green and purple northern lights over snowy mountains",
+    ai: "AI/northern_lights_1-1024x576.jpg",
+    real: null,
+    analysis: "AI/northern_lights_analysis-1024x576.png",
+    aiTells: "The aurora has a crumpled, fabric-like texture instead of smooth curtains of light, and the reflection in the water shows colours that aren't in the sky.",
+    realTells: ""
+  }
 ];
+
+function buildDeepfakeRounds() {
+  const makeRound = (topic, answer) => ({
+    answer,
+    caption: topic.caption,
+    alt: topic.alt,
+    src: answer === "fake" ? topic.ai : topic.real,
+    analysis: topic.analysis,
+    tells: answer === "fake" ? topic.aiTells : topic.realTells
+  });
+  // Rotate which half of each pair you get, so a replay shows the other version.
+  const pairs = deepfakeTopics.filter((topic) => topic.real);
+  const asFake = pickFresh("deepfake-variant", pairs, 2, (topic) => topic.caption);
+  const rounds = pairs.map((topic) => makeRound(topic, asFake.includes(topic) ? "fake" : "real"));
+  deepfakeTopics.filter((topic) => !topic.real).forEach((topic) => rounds.push(makeRound(topic, "fake")));
+  return shuffle(rounds);
+}
 
 function startDeepfake() {
   gameKicker.textContent = "GAME 05";
   gameTitle.textContent = "Deepfake Detective";
   gameArea.append(document.querySelector("#deepfake-template").content.cloneNode(true));
   if (window.lucide) lucide.createIcons();
-  const rounds = shuffle([...deepfakeRounds]);
+  const rounds = buildDeepfakeRounds();
+  rounds.forEach((round) => { new Image().src = round.src; new Image().src = round.analysis; });
   let index = 0;
   let correct = 0;
-  let seconds = 180;
 
   const channel = document.querySelector("#df-channel");
   const who = document.querySelector("#df-who");
   const photo = document.querySelector("#df-photo");
+  const prompt = document.querySelector("#df-prompt");
   const feedback = document.querySelector("#df-feedback");
+  const choices = document.querySelector("#df-choices");
+  const nextButton = document.querySelector("#df-next");
+  const nextLabel = document.querySelector("#df-next-label");
   const buttons = document.querySelectorAll(".df-choice");
 
   function render() {
     const round = rounds[index];
-    channel.textContent = "Profile photo";
+    channel.textContent = "Shared image";
     who.textContent = round.caption || "";
     photo.className = "df-photo";
-    photo.innerHTML = portraitSVG(round);
+    photo.innerHTML = `<img src="${round.src}" alt="${round.alt}">`;
+    prompt.hidden = false;
     feedback.hidden = true;
+    choices.hidden = false;
+    nextButton.hidden = true;
     gameProgress.textContent = `Photo ${index + 1} / ${rounds.length}`;
     buttons.forEach((button) => { button.disabled = false; });
   }
@@ -604,164 +879,133 @@ function startDeepfake() {
     const round = rounds[index];
     const ok = choice === round.answer;
     if (ok) correct += 1;
-    photo.classList.add("revealed");
+    photo.className = "df-photo revealed";
+    photo.innerHTML = `<img src="${round.analysis}" alt="Side-by-side comparison of the AI-generated and real version of this scene">`;
+    prompt.hidden = true;
     feedback.hidden = false;
     feedback.className = `feedback-panel ${ok ? "correct" : "wrong"}`;
     feedback.innerHTML = `<strong>${ok ? "Correct." : (round.answer === "fake" ? "It was AI-generated." : "It was a real photo.")}</strong> ${round.tells}`;
-    buttons.forEach((button) => { button.disabled = true; });
-    clearTimeout(state.advanceTimer);
-    state.advanceTimer = setTimeout(() => {
-      index += 1;
-      if (index >= rounds.length) finish();
-      else render();
-    }, 3600);
+    choices.hidden = true;
+    nextButton.hidden = false;
+    nextLabel.textContent = index + 1 >= rounds.length ? "See results" : "Next photo";
+    nextButton.focus();
   }
 
   buttons.forEach((button) => button.addEventListener("click", () => answer(button.dataset.choice)));
+  nextButton.addEventListener("click", () => {
+    index += 1;
+    if (index >= rounds.length) finish();
+    else render();
+  });
   render();
-
-  const timerEl = document.querySelector("#df-timer");
-  timerEl.textContent = formatClock(seconds);
-  state.timer = setInterval(() => {
-    seconds -= 1;
-    timerEl.textContent = formatClock(seconds);
-    if (seconds <= 0) finish();
-  }, 1000);
 
   function finish() {
     if (state.finished) return;
-    clearInterval(state.timer);
-    clearTimeout(state.advanceTimer);
     completeGame("deepfake");
-    showResult("Sharp eye!", `You judged ${correct} of ${rounds.length} portraits correctly. AI can invent realistic faces \u2014 zoom in on the eyes, ears, teeth, glasses, jewelry, and background to catch the fakes.`);
+    showResult("Sharp eye!", `You judged ${correct} of ${rounds.length} images correctly. AI images fall apart in the details \u2014 zoom in on hands, patterns, text, small objects, and reflections before you trust or share a picture.`);
   }
-}
-
-function portraitSVG(round) {
-  const flaws = round.flaws || [];
-  const has = (flaw) => flaws.includes(flaw);
-  const uid = "p" + Math.random().toString(36).slice(2, 8);
-  const skin = round.skin || "#e7b595";
-  const skinDark = round.skinDark || "#c98f6d";
-  const hair = round.hair || "#2a2730";
-  const bg1 = round.bg ? round.bg[0] : "#21506a";
-  const bg2 = round.bg ? round.bg[1] : "#0e2a3c";
-  const clothes = round.clothes || "#394a63";
-
-  const leftEye = { cx: 96, cy: 106, rx: 12, ry: 8 };
-  const rightEye = { cx: 146, cy: 106, rx: 12, ry: 8 };
-  if (has("asymmetric-eyes")) { rightEye.cy = 97; rightEye.rx = 15.5; rightEye.ry = 10.5; }
-
-  const leftEar = { cx: 56, cy: 120, rx: 11, ry: 17 };
-  const rightEar = { cx: 184, cy: 120, rx: 11, ry: 17 };
-  if (has("uneven-ears")) { rightEar.cy = 138; rightEar.rx = 14; rightEar.ry = 22; }
-
-  const glasses = round.glasses || has("warped-glasses");
-  const markers = [];
-  const mark = (x, y, text) => {
-    const left = x > 140;
-    markers.push(`<g class="pf-mark" transform="translate(${x},${y})"><circle r="15"/><text x="${left ? -20 : 20}" y="4" text-anchor="${left ? "end" : "start"}">${text}</text></g>`);
-  };
-
-  let bg = `<rect width="240" height="240" fill="url(#bg${uid})"/>`;
-  if (has("melted-background")) {
-    bg += `<g filter="url(#blur${uid})" opacity="0.85"><path d="M10 180 Q60 120 110 172 T230 150 L240 240 L0 240 Z" fill="${bg1}"/><circle cx="42" cy="58" r="30" fill="${bg2}"/></g>`;
-    mark(42, 54, "Melted background");
-  }
-
-  const hairBack = round.hairStyle === "long" ? `<path d="M58 96 Q60 210 96 214 L144 214 Q180 210 182 96 Z" fill="${hair}"/>` : "";
-  const shoulders = `<path d="M40 240 Q46 186 92 176 L148 176 Q194 186 200 240 Z" fill="${clothes}"/>`;
-  const neck = `<rect x="104" y="150" width="32" height="40" rx="12" fill="${skinDark}"/>`;
-
-  const ears = `<ellipse cx="${leftEar.cx}" cy="${leftEar.cy}" rx="${leftEar.rx}" ry="${leftEar.ry}" fill="${skinDark}"/><ellipse cx="${rightEar.cx}" cy="${rightEar.cy}" rx="${rightEar.rx}" ry="${rightEar.ry}" fill="${skinDark}"/>`;
-  if (has("uneven-ears")) mark(rightEar.cx + 8, rightEar.cy, "Ears don't match");
-
-  let earrings = "";
-  if (round.earrings) {
-    earrings += `<circle cx="${leftEar.cx}" cy="${leftEar.cy + leftEar.ry}" r="4" fill="#ffd666"/>`;
-    if (has("mismatched-earrings")) mark(rightEar.cx + 8, rightEar.cy + rightEar.ry, "One earring");
-    else earrings += `<circle cx="${rightEar.cx}" cy="${rightEar.cy + rightEar.ry}" r="4" fill="#ffd666"/>`;
-  }
-
-  const head = `<ellipse cx="120" cy="112" rx="62" ry="72" fill="url(#skin${uid})"/>`;
-
-  let hairTop = "";
-  if (round.hairStyle !== "bald") {
-    if (round.hairStyle === "bun") hairTop = `<circle cx="120" cy="40" r="15" fill="${hair}"/><path d="M62 98 Q66 46 120 44 Q174 46 178 98 Q150 72 120 72 Q90 72 62 98 Z" fill="${hair}"/>`;
-    else hairTop = `<path d="M60 100 Q58 40 120 38 Q182 40 180 100 Q168 74 120 74 Q72 74 60 100 Z" fill="${hair}"/>`;
-  }
-  if (has("blurry-hairline")) { hairTop = `<g filter="url(#blur${uid})">${hairTop}</g>`; mark(120, 52, "Fuzzy hairline"); }
-
-  const brows = `<path d="M${leftEye.cx - 14} ${leftEye.cy - 16} q14 -8 26 0" stroke="${hair}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M${rightEye.cx - 13} ${rightEye.cy - 16} q13 -8 26 0" stroke="${hair}" stroke-width="4" fill="none" stroke-linecap="round"/>`;
-
-  const eyeWhite = (e) => `<ellipse cx="${e.cx}" cy="${e.cy}" rx="${e.rx}" ry="${e.ry}" fill="#f7fbff"/>`;
-  const pupil = (e) => `<circle cx="${e.cx}" cy="${e.cy}" r="${Math.min(e.ry, 5)}" fill="#3a2f2a"/>`;
-  const eyes = eyeWhite(leftEye) + eyeWhite(rightEye) + pupil(leftEye) + pupil(rightEye);
-  if (has("asymmetric-eyes")) mark(rightEye.cx, rightEye.cy, "Mismatched eyes");
-
-  const nose = `<path d="M120 112 q-6 20 -2 26 q6 4 12 0" stroke="${skinDark}" stroke-width="3" fill="none" stroke-linecap="round"/>`;
-
-  let mouth;
-  if (has("extra-teeth")) {
-    mouth = `<path d="M100 150 q20 10 40 0 q-4 16 -20 16 q-16 0 -20 -16 Z" fill="#7a3b3b"/><g fill="#fdfdfd">` +
-      [0, 1, 2, 3, 4, 5].map((i) => `<rect x="${101 + i * 6.3}" y="151" width="5.5" height="9" rx="1"/>`).join("") + `</g>`;
-    mark(120, 168, "Odd teeth");
-  } else {
-    mouth = `<path d="M104 156 q16 12 32 0" stroke="#9c4b4b" stroke-width="5" fill="none" stroke-linecap="round"/>`;
-  }
-
-  let glassesSvg = "";
-  if (glasses) {
-    const warp = has("warped-glasses");
-    const rl = warp ? 19 : 16;
-    const h = warp ? 30 : 24;
-    const rot = warp ? 9 : 0;
-    glassesSvg = `<g stroke="#1a2a38" stroke-width="3" fill="rgba(120,180,200,.14)">` +
-      `<rect x="${leftEye.cx - 16}" y="${leftEye.cy - 12}" width="32" height="24" rx="8"/>` +
-      `<g transform="rotate(${rot} ${rightEye.cx} ${rightEye.cy})"><rect x="${rightEye.cx - rl}" y="${rightEye.cy - h / 2}" width="${rl * 2}" height="${h}" rx="8"/></g>` +
-      `<line x1="${leftEye.cx + 16}" y1="${leftEye.cy}" x2="${rightEye.cx - rl}" y2="${rightEye.cy}"/></g>`;
-    if (warp) mark(rightEye.cx, rightEye.cy + 20, "Warped glasses");
-  }
-
-  const defs = `<defs><linearGradient id="bg${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${bg1}"/><stop offset="1" stop-color="${bg2}"/></linearGradient><radialGradient id="skin${uid}" cx="0.5" cy="0.38" r="0.72"><stop offset="0" stop-color="${skin}"/><stop offset="1" stop-color="${skinDark}"/></radialGradient><filter id="blur${uid}"><feGaussianBlur stdDeviation="4"/></filter></defs>`;
-
-  return `<svg viewBox="0 0 240 240" role="img" aria-label="Portrait to assess">${defs}${bg}${hairBack}${shoulders}${neck}${ears}${earrings}${head}${hairTop}${brows}${eyes}${nose}${mouth}${glassesSvg}<g class="pf-markers">${markers.join("")}</g></svg>`;
 }
 
 /* ===== Game 06: Micro-Escape Room ===== */
 const escapePuzzles = [
   {
-    title: "Lock 1 \u2014 Isolate the infected computer",
+    title: "Isolate the infected computer",
     prompt: "Security tools flagged one machine sending files at 3 AM to an unknown address overseas. Which one do you disconnect?",
     options: [
-      { text: "Reception-PC \u2014 idle overnight, no activity", ok: false },
-      { text: "Finance-Laptop \u2014 sending data at 3 AM to an unknown server", ok: true },
-      { text: "Meeting-Room-TV \u2014 streamed a video at noon", ok: false },
-      { text: "Your-Phone \u2014 normal email sync", ok: false }
+      { text: "Reception-PC \u2014 idle overnight, no activity", ok: false, why: "This one did nothing all night. A quiet machine isn't the one leaking files \u2014 unplugging it just takes a working computer offline." },
+      { text: "Finance-Laptop \u2014 sending data at 3 AM to an unknown server", ok: true, why: "Nobody in finance is working at 3 AM, and company files should never travel to an address nobody recognises. Those two things together say \u201cthis machine is being controlled by someone else\u201d. Disconnecting it from the network stops the files leaving while everything else keeps running." },
+      { text: "Meeting-Room-TV \u2014 streamed a video at noon", ok: false, why: "Streaming a video at lunchtime is exactly what a meeting-room TV is for. Normal activity at a normal hour isn't a red flag." },
+      { text: "Your-Phone \u2014 normal email sync", ok: false, why: "Phones check email all day \u2014 that's routine. The clue you want is unusual activity at an unusual time going somewhere unknown." }
     ],
-    wrong: "Look for the odd behaviour \u2014 activity at 3 AM to an unknown address."
+    why: "The giveaway was the combination: an odd hour, and data going to a server nobody recognises. Pulling that one machine off the network cuts the attacker's connection without disrupting the rest of the office."
   },
   {
-    title: "Lock 2 \u2014 Spot the booby-trapped file",
+    title: "Spot the dangerous file",
     prompt: "One attachment is a disguised program, not a document. Which file is dangerous?",
     options: [
-      { text: "Quarterly-Report.pdf", ok: false },
-      { text: "Team-Photo.jpg", ok: false },
-      { text: "Invoice.pdf.exe", ok: true },
-      { text: "Notes.txt", ok: false }
+      { text: "Quarterly-Report.pdf", ok: false, why: "A single ending of .pdf means it opens in a PDF reader as a document. It can't run on its own." },
+      { text: "Team-Photo.jpg", ok: false, why: "A .jpg is just a picture. It opens in a photo viewer and doesn't install anything." },
+      { text: "Invoice.pdf.exe", ok: true, why: "Only the LAST part of a file name decides what it does, and .exe means \u201cprogram\u201d \u2014 double-click it and it runs. The \u201c.pdf\u201d in the middle is fake, put there so your eye reads \u201cinvoice PDF\u201d and clicks without thinking. Two endings in one name is almost always a trap." },
+      { text: "Notes.txt", ok: false, why: "A .txt is plain text \u2014 about the safest thing you can be sent. It opens in Notepad and nothing else." }
     ],
-    wrong: "Check the real ending. A double ending like .pdf.exe means it's a program in disguise."
+    why: "Always read a file name right to left. The final ending is what actually runs, so a name like Invoice.pdf.exe is a program wearing a document costume. On a work device, don't open it \u2014 report it."
   },
   {
-    title: "Lock 3 \u2014 Get out safely",
+    title: "Get out safely",
     prompt: "You've contained it. What's the right final move to open the door?",
     options: [
-      { text: "Delete everything and tell no one", ok: false },
-      { text: "Email the whole company a warning", ok: false },
-      { text: "Report it to IT and let them take over", ok: true },
-      { text: "Try to remove the malware yourself", ok: false }
+      { text: "Delete everything and tell no one", ok: false, why: "Deleting the evidence makes it impossible to find out how the attacker got in \u2014 so they'll simply walk back in the same way. Staying quiet also leaves everyone else unprotected." },
+      { text: "Email the whole company a warning", ok: false, why: "Well-meant, but it causes panic, and attackers who are still inside the mailbox get to read your warning too. Let IT send the official message." },
+      { text: "Report it to IT and let them take over", ok: true, why: "IT has the tools and the authority to check whether anything else is affected, preserve the evidence, and clean up properly. Your job is to raise the alarm quickly \u2014 reporting early is never the wrong call, even if it turns out to be nothing." },
+      { text: "Try to remove the malware yourself", ok: false, why: "DIY clean-ups usually miss the hidden parts and destroy the traces IT needs. You can also accidentally spread it to other machines." }
     ],
-    wrong: "Don't go it alone \u2014 the safe move is to report it and let the experts handle it."
+    why: "Containing the problem is step one; handing it to the people trained to deal with it is step two. Report fast, don't investigate alone, and don't destroy anything."
+  },
+  {
+    title: "Stop the invoice fraud",
+    prompt: "A supplier you deal with every month emails to say their bank details have changed, and asks you to pay today. What do you do first?",
+    options: [
+      { text: "Pay it \u2014 the email looks exactly like their usual one", ok: false, why: "Looking right proves nothing. Attackers copy real email templates, and sometimes they're sending from the supplier's own hacked mailbox." },
+      { text: "Call the supplier on the number you already had on file", ok: true, why: "A phone call to a number you already trust is the one check an attacker can't fake. Never use a number from the new email \u2014 that just rings them. This single habit stops most invoice fraud, and legitimate suppliers expect you to do it." },
+      { text: "Reply to the email and ask them to confirm", ok: false, why: "If the attacker controls or is watching that mailbox, they'll simply reply \u201cyes, that's correct\u201d. You'd be asking the thief to vouch for the theft." },
+      { text: "Forward it to a colleague so they can pay it", ok: false, why: "That just moves the risk to someone with less context. The payment still goes to the wrong account." }
+    ],
+    why: "Any change to bank details gets verified by voice, on a number you already hold, before a penny moves. Urgency is the pressure tactic \u2014 slowing down is the defence."
+  },
+  {
+    title: "Choose the password that holds",
+    prompt: "Four colleagues suggest a new password. Which one would take an attacker the longest to break?",
+    options: [
+      { text: "Summer2026!", ok: false, why: "A season, a year, and an exclamation mark is the most predictable pattern there is. Cracking tools try these combinations first." },
+      { text: "P@ssw0rd", ok: false, why: "Swapping letters for look-alike symbols is the oldest trick in the book, and every cracking tool knows it. This is guessed in under a second." },
+      { text: "rusty-anchor-pepper-moon", ok: true, why: "Four unrelated words make a long password you can actually remember, and length is what defeats guessing. Each extra character multiplies the work for an attacker, while swapping an o for a zero adds almost nothing." },
+      { text: "Your pet's name and birth year", ok: false, why: "Both are usually findable on social media, and attackers check there first. Anything personal is a weak secret." }
+    ],
+    why: "Length beats cleverness. A few random words \u2014 or whatever a password manager generates \u2014 beats a short password full of symbols every time."
+  },
+  {
+    title: "Pick the genuine website",
+    prompt: "You need to sign in to your bank. Four addresses appear. Which one is really the bank?",
+    options: [
+      { text: "yourbank.com", ok: true, why: "Read a web address from the left up to the first single slash, then look at the last two parts before it \u2014 that's the real owner. Here it's \u201cyourbank.com\u201d, so this is the genuine site. Everything after the slash can say anything and means nothing." },
+      { text: "yourbank.secure-login.net", ok: false, why: "The real owner is the bit at the end: secure-login.net. \u201cyourbank\u201d is just a label someone added on the front to reassure you." },
+      { text: "yourbank-verify.com", ok: false, why: "A hyphen makes a completely different website. yourbank-verify.com has nothing to do with yourbank.com." },
+      { text: "login-yourbank.com.co", ok: false, why: "The ending is .com.co, not .com. Adding an extra country code after .com is a common way to make a fake look familiar." }
+    ],
+    why: "Owner first, decoration later. Check the two parts immediately before the first single slash \u2014 or skip links entirely and type the address yourself."
+  },
+  {
+    title: "Deal with the found USB stick",
+    prompt: "You find a USB stick in the car park with a sticker that reads \u201cPayroll 2026 \u2014 Confidential\u201d. What now?",
+    options: [
+      { text: "Plug it in to find out whose it is", ok: false, why: "That's exactly what the label is for. A prepared USB stick can install software the moment it's connected, before you see a single file." },
+      { text: "Plug it into a spare computer instead", ok: false, why: "A spare machine is still on the company network. Infecting it gives the attacker the same foothold." },
+      { text: "Hand it to IT or reception without plugging it in", ok: true, why: "You lose nothing by handing it over, and you avoid the one action that can't be undone. If it genuinely belongs to a colleague, IT can return it safely; if it was dropped deliberately, you've just stopped the attack at the door." },
+      { text: "Take it home and look at it there", ok: false, why: "Your home computer is usually less protected, and anything it catches can travel back to work on your accounts." }
+    ],
+    why: "Irresistible labels are the bait. Never connect storage you didn't buy or wasn't given to you by IT."
+  },
+  {
+    title: "Handle the code you didn't ask for",
+    prompt: "Your phone buzzes with a six-digit sign-in code for your work account \u2014 but you weren't signing in. What does it mean, and what do you do?",
+    options: [
+      { text: "Ignore it, it's probably a glitch", ok: false, why: "Codes aren't sent by accident. Ignoring it leaves someone sitting at your login page with your password, trying again." },
+      { text: "Type it into the website to clear it", ok: false, why: "There's nothing to clear \u2014 entering it would simply complete the stranger's sign-in for them." },
+      { text: "Don't share it, change your password, and tell IT", ok: true, why: "An unrequested code means somebody already has your password and is one step away from your account. The code is the only thing stopping them, so never read it out. Changing the password closes the gap, and telling IT lets them check whether other accounts are affected." },
+      { text: "Send it to the person who says they're from IT", ok: false, why: "That's the whole scam. Genuine IT staff never need your code \u2014 they can't use it for anything except becoming you." }
+    ],
+    why: "A code you didn't request is an alarm bell, not an annoyance. Never share it, reset the password, and report it."
+  },
+  {
+    title: "Leave your desk safely",
+    prompt: "You're nipping out for a ten-minute coffee. What's the right move before you go?",
+    options: [
+      { text: "Lock the screen and take your badge with you", ok: true, why: "Locking takes one second (Windows key + L) and means nobody can read your email, send messages as you, or copy files while you're gone. Taking your badge stops someone using it to reach areas they shouldn't \u2014 and stops you being locked out." },
+      { text: "Leave it unlocked \u2014 you'll only be a minute", ok: false, why: "Most desk incidents take seconds, not minutes, and they're often not malicious \u2014 just a visitor or a cleaner who sees something they shouldn't." },
+      { text: "Turn the monitor off", ok: false, why: "The screen goes dark but the computer stays wide open. Anyone can switch it back on and carry on where you left off." },
+      { text: "Ask a nearby colleague to keep an eye on it", ok: false, why: "They'll be absorbed in their own work within a minute, and it isn't their responsibility if something happens." }
+    ],
+    why: "Lock the screen every single time, even for a moment. It costs a second and removes the easiest way into your account."
   }
 ];
 
@@ -770,34 +1014,45 @@ function startEscape() {
   gameTitle.textContent = "Micro-Escape Room";
   gameArea.append(document.querySelector("#escape-template").content.cloneNode(true));
   if (window.lucide) lucide.createIcons();
+  const puzzles = pickFresh("escape", escapePuzzles, 3, (puzzle) => puzzle.title);
   let step = 0;
   let seconds = 300;
 
   const title = document.querySelector("#escape-title");
   const prompt = document.querySelector("#escape-prompt");
   const options = document.querySelector("#escape-options");
+  const feedback = document.querySelector("#escape-feedback");
+  const nextButton = document.querySelector("#escape-next");
+  const nextLabel = document.querySelector("#escape-next-label");
   const locks = document.querySelectorAll(".escape-lock");
 
   function render() {
-    const puzzle = escapePuzzles[step];
-    title.textContent = puzzle.title;
+    const puzzle = puzzles[step];
+    title.textContent = `Lock ${step + 1} \u2014 ${puzzle.title}`;
     prompt.textContent = puzzle.prompt;
-    gameProgress.textContent = `Lock ${step + 1} / ${escapePuzzles.length}`;
+    gameProgress.textContent = `Lock ${step + 1} / ${puzzles.length}`;
     locks.forEach((lock, i) => lock.classList.toggle("open", i < step));
+    feedback.hidden = true;
+    nextButton.hidden = true;
     options.replaceChildren();
     shuffle([...puzzle.options]).forEach((opt) => {
       const button = document.createElement("button");
       button.className = "escape-option";
       button.textContent = opt.text;
       button.addEventListener("click", () => {
-        if (state.finished) return;
+        if (state.finished || !nextButton.hidden) return;
+        feedback.hidden = false;
+        feedback.className = `feedback-panel ${opt.ok ? "correct" : "wrong"}`;
         if (opt.ok) {
           button.classList.add("correct");
-          step += 1;
-          setTimeout(() => { if (step >= escapePuzzles.length) finish(); else render(); }, 500);
+          feedback.innerHTML = `<strong>That's the one.</strong> ${opt.why}<span class="escape-why">${puzzle.why}</span>`;
+          options.querySelectorAll(".escape-option").forEach((other) => { other.disabled = true; });
+          nextButton.hidden = false;
+          nextLabel.textContent = step + 1 >= puzzles.length ? "Open the door" : "Next lock";
+          nextButton.focus();
         } else {
           button.classList.add("wrong");
-          showToast(puzzle.wrong);
+          feedback.innerHTML = `<strong>Not that one.</strong> ${opt.why}`;
           setTimeout(() => button.classList.remove("wrong"), 500);
         }
       });
@@ -805,6 +1060,12 @@ function startEscape() {
     });
     if (window.lucide) lucide.createIcons();
   }
+
+  nextButton.addEventListener("click", () => {
+    step += 1;
+    if (step >= puzzles.length) finish();
+    else render();
+  });
   render();
 
   const timerEl = document.querySelector("#escape-timer");
@@ -818,23 +1079,51 @@ function startEscape() {
   function finish() {
     if (state.finished) return;
     clearInterval(state.timer);
-    const win = step >= escapePuzzles.length;
+    const win = step >= puzzles.length;
     if (win) locks.forEach((lock) => lock.classList.add("open"));
     completeGame("escape");
     showResult(win ? "You're out!" : "Time's up", win
-      ? "Nice work: you isolated the infected machine, caught the disguised file, and reported it the right way."
-      : "The exit stayed locked this time. Remember: isolate the odd device, watch for disguised files, and always report to IT.");
+      ? "Nice work — you picked the safe option at every lock. Slow down, check with someone you already trust, and report anything odd."
+      : "The exit stayed locked this time. Remember: isolate anything behaving oddly, verify by a route you already trust, and always report to IT.");
   }
 }
 
 /* ===== Game 07: Security Crossword ===== */
-const crosswordWords = [
-  { num: 2, dir: "across", row: 2, col: 1, answer: "PASSWORD", clue: "The secret word that unlocks your account" },
-  { num: 1, dir: "down", row: 1, col: 6, answer: "LOGIN", clue: "Signing in to an account" },
-  { num: 2, dir: "down", row: 2, col: 1, answer: "PHISHING", clue: "Fake messages that try to trick you into clicking" },
-  { num: 3, dir: "down", row: 2, col: 3, answer: "SCAM", clue: "A trick to steal your money or information" },
-  { num: 4, dir: "down", row: 2, col: 5, answer: "WIFI", clue: "Wireless internet you should protect with a password" },
-  { num: 5, dir: "down", row: 2, col: 8, answer: "DATA", clue: "Personal information worth protecting" }
+// Each puzzle is one 8-letter across word with down words hanging off its letters.
+const crosswordPuzzles = [
+  {
+    id: "basics",
+    words: [
+      { num: 2, dir: "across", row: 2, col: 1, answer: "PASSWORD", clue: "The secret word that unlocks your account" },
+      { num: 1, dir: "down", row: 1, col: 6, answer: "LOGIN", clue: "Signing in to an account" },
+      { num: 2, dir: "down", row: 2, col: 1, answer: "PHISHING", clue: "Fake messages that try to trick you into clicking" },
+      { num: 3, dir: "down", row: 2, col: 3, answer: "SCAM", clue: "A trick to steal your money or information" },
+      { num: 4, dir: "down", row: 2, col: 5, answer: "WIFI", clue: "Wireless internet you should protect with a password" },
+      { num: 5, dir: "down", row: 2, col: 8, answer: "DATA", clue: "Personal information worth protecting" }
+    ]
+  },
+  {
+    id: "defences",
+    words: [
+      { num: 2, dir: "across", row: 2, col: 1, answer: "FIREWALL", clue: "The barrier that blocks unwanted traffic from the internet" },
+      { num: 1, dir: "down", row: 1, col: 2, answer: "VIRUS", clue: "Harmful software that spreads from machine to machine" },
+      { num: 2, dir: "down", row: 2, col: 1, answer: "FRAUD", clue: "Deceiving someone to take their money" },
+      { num: 3, dir: "down", row: 2, col: 3, answer: "RISK", clue: "The chance that something could go wrong" },
+      { num: 4, dir: "down", row: 2, col: 5, answer: "WARNING", clue: "An alert that something may be unsafe" },
+      { num: 5, dir: "down", row: 2, col: 8, answer: "LOCK", clue: "What you do to your screen before walking away" }
+    ]
+  },
+  {
+    id: "habits",
+    words: [
+      { num: 2, dir: "across", row: 2, col: 1, answer: "SECURITY", clue: "Keeping information safe from harm" },
+      { num: 1, dir: "down", row: 1, col: 3, answer: "SCAM", clue: "A trick to steal your money or information" },
+      { num: 2, dir: "down", row: 2, col: 1, answer: "SHRED", clue: "Destroy paper so nobody can read it" },
+      { num: 3, dir: "down", row: 2, col: 2, answer: "EMAIL", clue: "Everyday messages that scammers love to fake" },
+      { num: 4, dir: "down", row: 2, col: 4, answer: "UPDATE", clue: "Install this to fix security holes" },
+      { num: 5, dir: "down", row: 2, col: 6, answer: "IDENTITY", clue: "Who you are \u2014 thieves try to steal it" }
+    ]
+  }
 ];
 
 function startCrossword() {
@@ -844,11 +1133,12 @@ function startCrossword() {
   gameArea.append(document.querySelector("#crossword-template").content.cloneNode(true));
   if (window.lucide) lucide.createIcons();
 
+  const [puzzle] = pickFresh("crossword", crosswordPuzzles, 1, (item) => item.id);
   const rows = 9;
   const cols = 8;
   const cells = {};
   const inputs = {};
-  const words = crosswordWords.map((word) => {
+  const words = puzzle.words.map((word) => {
     const list = [];
     for (let i = 0; i < word.answer.length; i += 1) {
       const r = word.dir === "down" ? word.row + i : word.row;
@@ -1041,34 +1331,86 @@ function startCrossword() {
 }
 
 /* ===== Game 08: Sort It Out (data classification) ===== */
-const dataItems = [
-  { label: "Company press release", bin: "public" },
-  { label: "The office lunch menu", bin: "public" },
-  { label: "A published blog post", bin: "public" },
-  { label: "Your company's public website", bin: "public" },
-  { label: "A customer's credit card number", bin: "private" },
-  { label: "An employee's home address", bin: "private" },
-  { label: "A login one-time code", bin: "private" },
-  { label: "The internal salary spreadsheet", bin: "private" }
+const sortRounds = [
+  {
+    eyebrow: "ROUND 1 \u2014 WHAT'S SAFE TO SHARE?",
+    instructions: "Tap an item, then tap a box to sort it. Some information is fine to share with anyone; some must stay inside the company. Press Check when every item is sorted.",
+    binA: { label: "Safe to share", icon: "globe" },
+    binB: { label: "Keep private", icon: "lock" },
+    items: [
+      { label: "Company press release", bin: "a" },
+      { label: "The office lunch menu", bin: "a" },
+      { label: "A published blog post", bin: "a" },
+      { label: "Your company's public website", bin: "a" },
+      { label: "The careers page job advert", bin: "a" },
+      { label: "A product brochure handed out at events", bin: "a" },
+      { label: "The office opening hours", bin: "a" },
+      { label: "A photo from the company charity run", bin: "a" },
+      { label: "A customer's credit card number", bin: "b" },
+      { label: "An employee's home address", bin: "b" },
+      { label: "A login one-time code", bin: "b" },
+      { label: "The internal salary spreadsheet", bin: "b" },
+      { label: "A colleague's medical note", bin: "b" },
+      { label: "The list of customers and their contact details", bin: "b" },
+      { label: "A photo of your building pass", bin: "b" },
+      { label: "Next quarter's results before they're announced", bin: "b" }
+    ],
+    done: "When in doubt, keep it private \u2014 especially anything that identifies a person, any password or code, or internal company details."
+  },
+  {
+    eyebrow: "ROUND 2 \u2014 WHAT'S SAFE TO PROMPT?",
+    instructions: "AI assistants keep whatever you type into them. Sort what's fine to put in a prompt and what should never be pasted into an AI tool.",
+    binA: { label: "Safe to prompt", icon: "sparkles" },
+    binB: { label: "Never paste into AI", icon: "shield-alert" },
+    items: [
+      { label: "Explain phishing in simple words", bin: "a" },
+      { label: "Draft an agenda for a team meeting", bin: "a" },
+      { label: "Shorten our published press release", bin: "a" },
+      { label: "Suggest ideas for a team quiz", bin: "a" },
+      { label: "Rewrite this paragraph more politely", bin: "a" },
+      { label: "Give me ten icebreaker questions", bin: "a" },
+      { label: "What does two-factor authentication mean?", bin: "a" },
+      { label: "Summarise this public news article", bin: "a" },
+      { label: "A customer's name and account number", bin: "b" },
+      { label: "An unreleased financial report", bin: "b" },
+      { label: "A photo of a colleague's payslip", bin: "b" },
+      { label: "Your work password", bin: "b" },
+      { label: "A list of staff emails and phone numbers", bin: "b" },
+      { label: "A contract that hasn't been signed yet", bin: "b" },
+      { label: "Screenshots of an internal system", bin: "b" },
+      { label: "A customer complaint with their full details", bin: "b" }
+    ],
+    done: "Treat an AI prompt like a public post: anything you paste in may be stored or reviewed. General questions and already-public text are fine \u2014 customer data, unreleased documents, and credentials are not."
+  }
 ];
 
 function startDataDefender() {
   gameKicker.textContent = "GAME 08";
   gameTitle.textContent = "Sort It Out";
   gameArea.append(document.querySelector("#data-template").content.cloneNode(true));
-  if (window.lucide) lucide.createIcons();
 
-  const items = shuffle([...dataItems]);
-  const total = items.length;
+  const eyebrow = document.querySelector("#data-eyebrow");
+  const instructions = document.querySelector("#data-instructions");
+  const headA = document.querySelector("#bin-a-head");
+  const headB = document.querySelector("#bin-b-head");
   const tray = document.querySelector("#data-tray");
-  const dropPublic = document.querySelector("#bin-public .bin-drop");
-  const dropPrivate = document.querySelector("#bin-private .bin-drop");
+  const dropA = document.querySelector("#bin-a .bin-drop");
+  const dropB = document.querySelector("#bin-b .bin-drop");
   const checkBtn = document.querySelector("#data-check");
+  const nextBtn = document.querySelector("#data-next");
+  const nextLabel = document.querySelector("#data-next-label");
+  const feedback = document.querySelector("#data-feedback");
+  let roundIndex = 0;
+  const drawn = sortRounds.map((round, i) => shuffle([
+    ...pickFresh(`sort-${i}-a`, round.items.filter((item) => item.bin === "a"), 4),
+    ...pickFresh(`sort-${i}-b`, round.items.filter((item) => item.bin === "b"), 4)
+  ]));
   let selected = null;
 
   function updateProgress() {
+    const total = drawn[roundIndex].length;
     const placed = total - tray.querySelectorAll(".data-chip").length;
-    gameProgress.textContent = `Sorted ${placed} / ${total}`;
+    gameProgress.textContent = `Round ${roundIndex + 1} / ${sortRounds.length} \u00b7 Sorted ${placed} / ${total}`;
     checkBtn.disabled = placed !== total;
   }
 
@@ -1086,23 +1428,39 @@ function startDataDefender() {
     updateProgress();
   }
 
-  items.forEach((item) => {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "data-chip";
-    chip.textContent = item.label;
-    chip.dataset.bin = item.bin;
-    chip.addEventListener("click", (event) => { event.stopPropagation(); select(chip); });
-    tray.append(chip);
-  });
+  function render() {
+    const round = sortRounds[roundIndex];
+    eyebrow.textContent = round.eyebrow;
+    instructions.textContent = round.instructions;
+    headA.innerHTML = `<i data-lucide="${round.binA.icon}"></i> ${round.binA.label}`;
+    headB.innerHTML = `<i data-lucide="${round.binB.icon}"></i> ${round.binB.label}`;
+    tray.replaceChildren();
+    dropA.replaceChildren();
+    dropB.replaceChildren();
+    selected = null;
+    checkBtn.hidden = false;
+    nextBtn.hidden = true;
+    feedback.hidden = true;
+    shuffle([...drawn[roundIndex]]).forEach((item) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "data-chip";
+      chip.textContent = item.label;
+      chip.dataset.bin = item.bin;
+      chip.addEventListener("click", (event) => { event.stopPropagation(); select(chip); });
+      tray.append(chip);
+    });
+    updateProgress();
+    if (window.lucide) lucide.createIcons();
+  }
 
-  document.querySelector("#bin-public").addEventListener("click", () => moveTo(dropPublic));
-  document.querySelector("#bin-private").addEventListener("click", () => moveTo(dropPrivate));
+  document.querySelector("#bin-a").addEventListener("click", () => moveTo(dropA));
+  document.querySelector("#bin-b").addEventListener("click", () => moveTo(dropB));
   tray.addEventListener("click", () => moveTo(tray));
 
   checkBtn.addEventListener("click", () => {
     let allCorrect = true;
-    [[dropPublic, "public"], [dropPrivate, "private"]].forEach(([drop, want]) => {
+    [[dropA, "a"], [dropB, "b"]].forEach(([drop, want]) => {
       drop.querySelectorAll(".data-chip").forEach((chip) => {
         const ok = chip.dataset.bin === want;
         chip.classList.toggle("correct", ok);
@@ -1110,36 +1468,64 @@ function startDataDefender() {
         if (!ok) allCorrect = false;
       });
     });
-    if (allCorrect) {
-      completeGame("data");
-      showResult("Sorted!", "Nice work. When in doubt, keep it private \u2014 especially anything that identifies a person, any password or code, or internal company details.");
-    } else {
+    if (!allCorrect) {
       showToast("Some are misplaced \u2014 the red ones belong in the other box.");
+      return;
     }
+    const round = sortRounds[roundIndex];
+    if (roundIndex + 1 >= sortRounds.length) {
+      completeGame("data");
+      showResult("Sorted!", round.done);
+      return;
+    }
+    showToast("Round 1 cleared.");
+    feedback.hidden = false;
+    feedback.className = "feedback-panel correct";
+    feedback.textContent = round.done;
+    checkBtn.hidden = true;
+    nextBtn.hidden = false;
+    nextLabel.textContent = "Next round";
+    nextBtn.focus();
   });
 
-  updateProgress();
+  nextBtn.addEventListener("click", () => {
+    roundIndex += 1;
+    render();
+  });
+
+  render();
 }
 
 /* ===== Game 09: Security Match (memory pairs) ===== */
 const matchPairs = [
   { risk: "Phishing email", fix: "Don't click \u2014 report it" },
   { risk: "Weak password", fix: "Use a long passphrase" },
-  { risk: "Public Wi-Fi", fix: "Don't open sensitive accounts" },
+  { risk: "Work laptop or phone", fix: "Don't connect to a public network" },
   { risk: "A USB stick you found", fix: "Don't plug it in" },
   { risk: "Software update ready", fix: "Install it promptly" },
-  { risk: "Lost work laptop", fix: "Report it right away" }
+  { risk: "Lost work laptop", fix: "Report it right away" },
+  { risk: "Stepping away from your desk", fix: "Lock the screen" },
+  { risk: "Same password everywhere", fix: "One password per account" },
+  { risk: "A code you didn't ask for", fix: "Never share it" },
+  { risk: "Paper with customer details", fix: "Shred it" },
+  { risk: "Stranger following you in", fix: "Ask them to badge in" },
+  { risk: "Supplier changes bank details", fix: "Phone a number you already have" },
+  { risk: "Unexpected attachment", fix: "Check with the sender first" },
+  { risk: "Confidential chat in public", fix: "Move somewhere private" },
+  { risk: "Old files you no longer need", fix: "Delete them securely" },
+  { risk: "Suspicious message you reported", fix: "Then delete it" }
 ];
 
 function startMatch() {
   gameKicker.textContent = "GAME 09";
   gameTitle.textContent = "Security Match";
-  gameProgress.textContent = `0 / ${matchPairs.length} pairs`;
+  const pairs = pickFresh("match", matchPairs, 6, (pair) => pair.risk);
+  gameProgress.textContent = `0 / ${pairs.length} pairs`;
   gameArea.append(document.querySelector("#match-template").content.cloneNode(true));
   if (window.lucide) lucide.createIcons();
 
   const cards = [];
-  matchPairs.forEach((pair, i) => {
+  pairs.forEach((pair, i) => {
     cards.push({ pair: i, text: pair.risk });
     cards.push({ pair: i, text: pair.fix });
   });
@@ -1171,9 +1557,9 @@ function startMatch() {
       first.button.classList.add("matched");
       button.classList.add("matched");
       matched += 1;
-      gameProgress.textContent = `${matched} / ${matchPairs.length} pairs`;
+      gameProgress.textContent = `${matched} / ${pairs.length} pairs`;
       first = null;
-      if (matched === matchPairs.length) finish();
+      if (matched === pairs.length) finish();
     } else {
       lock = true;
       const prev = first;

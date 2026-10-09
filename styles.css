@@ -134,7 +134,9 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--blue); }
 .subject { margin: 0 0 22px; color: var(--white); font-size: 1.25rem; font-weight: 700; }
 .link-preview { width: fit-content; margin-top: 24px; padding: 10px 13px; border: 1px solid var(--line); background: var(--ink); color: var(--blue); font-family: "DM Mono", monospace; font-size: 0.76rem; overflow-wrap: anywhere; }
 .decision-row { padding: 20px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; border-top: 1px solid var(--line); }
+.decision-row[hidden] { display: none; }
 .decision, .primary-button, .secondary-button { min-height: 50px; display: inline-flex; justify-content: center; align-items: center; gap: 9px; border-radius: 4px; font-weight: 700; cursor: pointer; }
+.decision[hidden], .primary-button[hidden], .secondary-button[hidden] { display: none; }
 .decision { border: 1px solid var(--line); background: transparent; }
 .decision.safe:hover { border-color: var(--mint); color: var(--mint); }
 .decision.phish:hover { border-color: var(--coral); color: var(--coral); }
@@ -242,10 +244,6 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--blue); }
 .site-footer span { display: inline-flex; align-items: center; gap: 8px; }
 .site-footer svg { width: 15px; color: var(--blue); }
 
-/* ===== Completed card state ===== */
-.mission-card.done { border-color: rgba(114, 230, 189, .45); }
-.mission-card.done::before { content: "\2713 Played"; position: absolute; right: 24px; bottom: 26px; z-index: 2; color: var(--mint); font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .02em; }
-
 /* ===== Game 01: Phish Swipe ===== */
 .swipe-layout { display: grid; grid-template-columns: 280px 1fr; gap: 18px; }
 .swipe-stage { position: relative; display: flex; flex-direction: column; gap: 16px; }
@@ -307,15 +305,14 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--blue); }
 .df-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
 .df-channel { padding: 5px 12px; border-radius: 999px; background: var(--panel); color: var(--blue); font-family: "DM Mono", monospace; font-size: .72rem; text-transform: uppercase; }
 .df-who { color: var(--muted); font-weight: 600; }
-.df-photo { width: 100%; max-width: 300px; margin: 0 auto 10px; aspect-ratio: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--ink); box-shadow: var(--shadow); }
-.df-photo svg { width: 100%; height: 100%; display: block; }
-.df-photo .pf-markers { opacity: 0; transition: opacity .3s ease; }
-.df-photo.revealed .pf-markers { opacity: 1; }
-.pf-mark circle { fill: rgba(255,118,95,.12); stroke: var(--coral); stroke-width: 2.5; }
-.pf-mark text { fill: #fff; font-family: "DM Mono", monospace; font-size: 11px; font-weight: 500; paint-order: stroke; stroke: rgba(7,16,30,.85); stroke-width: 3.5px; stroke-linejoin: round; }
+.df-photo { width: 100%; max-width: 520px; margin: 0 auto 10px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--ink); box-shadow: var(--shadow); }
+.df-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.df-photo.revealed img { object-fit: contain; }
 .df-prompt { margin: 6px 0 20px; text-align: center; font-size: 1.1rem; font-weight: 600; color: #e4efec; }
 .deepfake-card .decision-row { padding: 0; border: 0; margin-top: auto; }
-.deepfake-card .feedback-panel { margin-top: 18px; border: 1px solid var(--line); border-radius: 6px; }
+.df-next { width: 100%; margin-top: auto; border-color: var(--blue); color: var(--blue); }
+.df-next:hover { background: rgba(63, 216, 230, .12); }
+.deepfake-card .feedback-panel { margin: 6px 0 20px; border: 1px solid var(--line); border-radius: 6px; }
 
 /* ===== Game 06: Micro-Escape Room ===== */
 .escape-layout { display: flex; flex-direction: column; gap: 18px; }
@@ -332,6 +329,11 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--blue); }
 .escape-option:hover { border-color: var(--blue); }
 .escape-option.correct { border-color: var(--mint); background: rgba(114,230,189,.14); color: var(--mint); }
 .escape-option.wrong { border-color: var(--coral); background: rgba(255,118,95,.14); animation: shake 320ms ease; }
+.escape-option:disabled { cursor: default; opacity: .55; }
+.escape-option.correct:disabled { opacity: 1; }
+.escape-board .feedback-panel { margin-top: 20px; border: 1px solid var(--line); border-radius: 6px; }
+.escape-why { display: block; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); }
+.escape-next { width: 100%; margin-top: 16px; }
 @keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
 
 /* ===== Game 07: Security Crossword ===== */
@@ -373,6 +375,7 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--blue); }
 
 /* ===== Game 08: Sort It Out ===== */
 .data-layout { display: flex; flex-direction: column; gap: 18px; }
+.data-layout .feedback-panel { border: 1px solid var(--line); border-radius: 6px; }
 .data-intro { color: var(--muted); line-height: 1.55; }
 .data-intro .eyebrow { margin-bottom: 8px; }
 .data-intro p:last-child { margin: 0; }
@@ -386,7 +389,7 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--blue); }
 .data-bin { border: 1px solid var(--line); border-radius: 10px; background: rgba(13,34,58,.9); overflow: hidden; cursor: pointer; }
 .bin-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-weight: 700; }
 .bin-head svg { width: 18px; color: var(--mint); }
-#bin-private .bin-head svg { color: var(--coral); }
+#bin-b .bin-head svg { color: var(--coral); }
 .bin-drop { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 10px; min-height: 150px; padding: 14px; }
 .data-actions { display: flex; justify-content: flex-end; }
 
